@@ -1,7 +1,7 @@
 {
-  "name": "my-module",
-  "version": "1.0.0",
-  "description": "My new Nuxt module",
+  "name": "nupolyon",
+  "version": "0.1.0",
+  "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
   "type": "module",
   "exports": {

@@ -8,7 +8,7 @@ import {
 export default defineEventHandler((event) => {
   const config   = useRuntimeConfig()
   const features = (config.nupolyon.features ?? ['default']) as string[]
-  const ua       = getHeader(event, 'user-agent')
+  const ua       = getHeader(event, 'User-Agent')
 
   return polyfill.getPolyfillString({
     uaString: ua,

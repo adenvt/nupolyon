@@ -1,6 +1,4 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
-  nupolyon: {
-    host: 'selfhost'
-  }
+  modules : ['../src/module'],
+  nupolyon: { host: 'selfhost' },
 })

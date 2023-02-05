@@ -5271,26 +5271,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"my-module@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "my-module@workspace:."
-  dependencies:
-    "@nuxt/eslint-config": ^0.1.1
-    "@nuxt/kit": ^3.1.2
-    "@nuxt/module-builder": ^0.2.1
-    "@nuxt/schema": ^3.1.2
-    "@nuxt/test-utils": ^3.1.2
-    "@types/polyfill-library": ^3.108.1
-    changelogen: ^0.4.1
-    eslint: ^8.33.0
-    nuxt: ^3.1.2
-    polyfill-library: ^4.6.0
-    polyfillist: ^0.1.0
-    ufo: ^1.0.1
-    vitest: ^0.28.3
-  languageName: unknown
-  linkType: soft
-
 "nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
@@ -5600,6 +5580,26 @@ __metadata:
   checksum: 5afc3dafcd1573b08877ca8e6148c52abd565f1d06b1eb08caf982e3fa289a82f2cae697ffb55b5021e146d60443f1590a5d6b944844e944714a5b549675bcd3
   languageName: node
   linkType: hard
+
+"nupolyon@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "nupolyon@workspace:."
+  dependencies:
+    "@nuxt/eslint-config": ^0.1.1
+    "@nuxt/kit": ^3.1.2
+    "@nuxt/module-builder": ^0.2.1
+    "@nuxt/schema": ^3.1.2
+    "@nuxt/test-utils": ^3.1.2
+    "@types/polyfill-library": ^3.108.1
+    changelogen: ^0.4.1
+    eslint: ^8.33.0
+    nuxt: ^3.1.2
+    polyfill-library: ^4.6.0
+    polyfillist: ^0.1.0
+    ufo: ^1.0.1
+    vitest: ^0.28.3
+  languageName: unknown
+  linkType: soft
 
 "nuxi@npm:3.1.2":
   version: 3.1.2

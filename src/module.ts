@@ -4,7 +4,7 @@ import {
   addServerHandler,
   createResolver
 } from '@nuxt/kit'
-import { withQuery } from 'ufo'
+import { joinURL, withQuery } from 'ufo'
 import polyfillist from 'polyfillist'
 
 type AnyString = (string & Record<never, never>)
@@ -30,7 +30,7 @@ export default defineNuxtModule<ModuleOptions>({
     const isSelfHost = options.host === 'selfhost'
     const src        = options.host && !isSelfHost
       ? withQuery(options.host, { features: features.join(',') })
-      : '/_nupolyon/polyfill'
+      : joinURL(nuxt.options.app.baseURL, '/_nupolyon/polyfill')
 
     nuxt.options.runtimeConfig.nupolyon        = { features }
     nuxt.options.runtimeConfig.public.nupolyon = { src }

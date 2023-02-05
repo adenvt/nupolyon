@@ -10,6 +10,14 @@ export default defineNuxtPlugin(() => {
 
   if (host) {
     useHead({
+      link: [
+        {
+          rel        : 'preload',
+          as         : 'script',
+          crossorigin: 'anonymous',
+          href       : host,
+        }
+      ],
       script: [
         {
           src        : host,
