@@ -38,7 +38,7 @@
     "@nuxt/schema": "^3.1.2",
     "@nuxt/test-utils": "^3.1.2",
     "@types/polyfill-library": "^3.108.1",
-    "changelogen": "^0.4.1",
+    "changelogen": "^0.5.0",
     "eslint": "^8.33.0",
     "nuxt": "^3.1.2",
     "vitest": "^0.28.3"
