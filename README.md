@@ -51,6 +51,36 @@ export default defineNuxtConfig({
 
 That's it! You can now use Nupolyon in your Nuxt app ✨
 
+## Configuration
+
+### Change host
+
+```js
+export default defineNuxtConfig({
+  modules: [
+    'nupolyon'
+  ],
+  nupolyon: {
+    host: 'http://my-own-cdn.com/polyfill.min.js'
+  },
+})
+```
+
+### Selfhost mode
+
+Set host to `selfhost` to enable self-host mode
+
+```js
+export default defineNuxtConfig({
+  modules: [
+    'nupolyon'
+  ],
+  nupolyon: {
+    host: 'selfhost'
+  },
+})
+```
+
 ## Development
 
 ```bash
@@ -76,6 +106,7 @@ npm run test:watch
 # Release new version
 npm run release
 ```
+
 ## License
 
 This project published under MIT License, see [LICENSE](/LICENSE) for more details.
