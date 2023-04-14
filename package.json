@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.1.2",
+    "browserslist-to-esbuild": "^1.2.0",
     "polyfill-library": "^4.6.0",
     "polyfillist": "^0.1.0",
     "ufo": "^1.0.1"

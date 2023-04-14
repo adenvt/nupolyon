@@ -2,10 +2,12 @@ import {
   defineNuxtModule,
   addPlugin,
   addServerHandler,
-  createResolver
+  createResolver,
+  extendViteConfig,
 } from '@nuxt/kit'
 import { joinURL, withQuery } from 'ufo'
 import polyfillist from 'polyfillist'
+import browserslistToEsbuild from 'browserslist-to-esbuild'
 
 type AnyString = (string & Record<never, never>)
 
@@ -45,5 +47,10 @@ export default defineNuxtModule<ModuleOptions>({
         handler: resolver.resolve('./runtime/selfhost')
       })
     }
+
+    extendViteConfig((config) => {
+      if (config.build)
+        config.build.target = browserslistToEsbuild(options.target)
+    })
   }
 })
