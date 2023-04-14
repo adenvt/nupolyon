@@ -1,6 +1,7 @@
 {
   "name": "nupolyon",
   "version": "0.1.0",
+  "packageManager": "yarn@3.5.0",
   "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
   "type": "module",
@@ -35,13 +36,13 @@
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
-    "@nuxt/module-builder": "^0.3.0",
+    "@nuxt/module-builder": "^0.2.1",
     "@nuxt/schema": "^3.1.2",
     "@nuxt/test-utils": "^3.1.2",
     "@types/polyfill-library": "^3.108.1",
     "changelogen": "^0.5.0",
     "eslint": "^8.33.0",
     "nuxt": "^3.1.2",
-    "vitest": "^0.30.0"
+    "vitest": "^0.28.3"
   }
 }
