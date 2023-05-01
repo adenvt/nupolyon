@@ -1,7 +1,7 @@
 {
   "name": "nupolyon",
   "version": "0.1.0",
-  "packageManager": "yarn@3.5.0",
+  "packageManager": "yarn@3.5.1",
   "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
   "type": "module",
