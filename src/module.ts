@@ -5,13 +5,13 @@ import {
   createResolver,
   extendViteConfig,
 } from '@nuxt/kit'
-import { joinURL, withQuery } from 'ufo'
+import { withQuery } from 'ufo'
 import polyfillist from 'polyfillist'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
 
 type AnyString = (string & Record<never, never>)
 
-// Module options TypeScript inteface definition
+// Module options TypeScript interface definition
 export interface ModuleOptions {
   target?: string | string[],
   host?: 'selfhost' | AnyString,
@@ -32,10 +32,10 @@ export default defineNuxtModule<ModuleOptions>({
     const isSelfHost = options.host === 'selfhost'
     const src        = options.host && !isSelfHost
       ? withQuery(options.host, { features: features.join(',') })
-      : joinURL(nuxt.options.app.baseURL, '/_nupolyon/polyfill')
+      : '/_nupolyon/polyfill'  // NOTE: app.baseUrl will be prepended to this path at runtime in the plugin.
 
     nuxt.options.runtimeConfig.nupolyon        = { features }
-    nuxt.options.runtimeConfig.public.nupolyon = { src }
+    nuxt.options.runtimeConfig.public.nupolyon = { src, isSelfHost }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve('./runtime/plugin'))
