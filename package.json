@@ -1,6 +1,6 @@
 {
   "name": "nupolyon",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "packageManager": "yarn@3.6.0",
   "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
