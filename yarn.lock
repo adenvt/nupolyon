@@ -6559,8 +6559,8 @@ __metadata:
   linkType: hard
 
 "polyfillist@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "polyfillist@npm:0.1.0"
+  version: 0.1.1
+  resolution: "polyfillist@npm:0.1.1"
   dependencies:
     browserslist: ^4.21.4
     meow: ^11.0.0
@@ -6569,7 +6569,7 @@ __metadata:
     ufo: ^1.0.1
   bin:
     polyfillist: ./dist/cli.mjs
-  checksum: 10371a8afb141f549ab7dcd4f0d2be8729693611b5146715ae3c0fab495aeebcb86c57ea4ecff6ffc34636534b0666c9e7faefd977a640327e4ba4b97f6e8183
+  checksum: 58c5368a1ea8659df7933f20495a2036bcadce3868c0306291b505fd16972d8f3f3a7acd35b3e186d979fa8360a8494df0d079034c8b94e8fe1623c86cdb7256
   languageName: node
   linkType: hard
 
