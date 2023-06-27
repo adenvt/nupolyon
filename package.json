@@ -1,6 +1,6 @@
 {
   "name": "nupolyon",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "packageManager": "yarn@3.6.0",
   "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
@@ -31,7 +31,7 @@
     "@nuxt/kit": "^3.1.2",
     "browserslist-to-esbuild": "^1.2.0",
     "polyfill-library": "^4.6.0",
-    "polyfillist": "^0.1.0",
+    "polyfillist": "^0.1.1",
     "ufo": "^1.0.1"
   },
   "devDependencies": {
