@@ -1,9 +1,9 @@
 import {
   defineNuxtModule,
-  addPlugin,
   addServerHandler,
   createResolver,
   extendViteConfig,
+  addServerPlugin,
 } from '@nuxt/kit'
 import { withQuery } from 'ufo'
 import polyfillist from 'polyfillist'
@@ -27,7 +27,8 @@ export default defineNuxtModule<ModuleOptions>({
     host: 'https://polyfill.io/v3/polyfill.min.js',
   },
   async setup (options, nuxt) {
-    const resolver   = createResolver(import.meta.url)
+    const resolver = createResolver(import.meta.url)
+
     const features   = await polyfillist(options.target)
     const isSelfHost = options.host === 'selfhost'
     const src        = options.host && !isSelfHost
@@ -37,8 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.runtimeConfig.nupolyon        = { features }
     nuxt.options.runtimeConfig.public.nupolyon = { src, isSelfHost }
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    addServerPlugin(resolver.resolve('./runtime/server/plugins/polyfill'))
 
     if (isSelfHost) {
       addServerHandler({
