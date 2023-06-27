@@ -6543,8 +6543,8 @@ __metadata:
   linkType: hard
 
 "polyfill-library@npm:^4.6.0":
-  version: 4.7.0
-  resolution: "polyfill-library@npm:4.7.0"
+  version: 4.8.0
+  resolution: "polyfill-library@npm:4.8.0"
   dependencies:
     "@financial-times/polyfill-useragent-normaliser": ^2.0.1
     from2-string: ^1.1.0
@@ -6554,7 +6554,7 @@ __metadata:
     stream-from-promise: ^1.0.0
     stream-to-string: ^1.1.0
     toposort: ^2.0.2
-  checksum: 53164543feefd95e19a672180c705d21d3afffa628b7de92da2cdbae3edc3ad8e64696296dc75f218d3d3e0437a197b910a0b13dc90ecf77df1b2994b1861fdc
+  checksum: 98c19e6313bf57fd843c46c88ece190d3f3b73d11e0887f9a413f477404a5add3e032202d3ef889d54f5f315382f7a59c50e9aee4fd516c0be80f0f73ac75a8d
   languageName: node
   linkType: hard
 
