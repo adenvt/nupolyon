@@ -1,7 +1,9 @@
-import MyModule from '../../../src/module'
+import Nupolyon from '../../../src/module'
 
 export default defineNuxtConfig({
   modules: [
-    MyModule
-  ]
+    Nupolyon
+  ],
+
+  nupolyon: { host: 'selfhost' },
 })
