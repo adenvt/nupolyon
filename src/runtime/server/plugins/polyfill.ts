@@ -29,9 +29,9 @@ export default defineNitroPlugin((nitroApp) => {
   const host = !isSelfHost ? src : cleanDoubleSlashes(joinURL(config.app.baseURL, src))
 
   if (host) {
-    // NOTE: By setting `nomodule` we make sure it executed directly upon loading, and also works in browsers which don't support ESM.
     const preload  = `<link rel="preload" href="${host}" crossorigin="anonymous" as="script" />`
-    const polyfill = `<script src="${host}" crossorigin="anonymous" nomodule></script>`
+    // NOTE: We intentionally omit type="module" here because it will defer the execution of the polyfill
+    const polyfill = `<script src="${host}" crossorigin="anonymous"></script>`
 
     nitroApp.hooks.hook('render:html', (html) => {
       html.head.unshift(preload, polyfill)  // insert at the beginning of the array
