@@ -29,9 +29,9 @@ export default defineNitroPlugin((nitroApp) => {
   const host = !isSelfHost ? src : cleanDoubleSlashes(joinURL(config.app.baseURL, src))
 
   if (host) {
-    const preload  = `<link rel="preload" href="${host}" crossorigin="anonymous" as="script" />`
+    const preload  = `<link rel="preload" href="${host}" crossorigin="anonymous" as="script" data-testid="nupolyon-preload" />`
     // NOTE: We intentionally omit type="module" here because it will defer the execution of the polyfill
-    const polyfill = `<script src="${host}" crossorigin="anonymous"></script>`
+    const polyfill = `<script src="${host}" crossorigin="anonymous" data-testid="nupolyon-script"></script>`
 
     nitroApp.hooks.hook('render:html', (html) => {
       html.head.unshift(preload, polyfill)  // insert at the beginning of the array
