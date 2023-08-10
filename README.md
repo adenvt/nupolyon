@@ -53,30 +53,19 @@ That's it! You can now use Nupolyon in your Nuxt app ✨
 
 ## Configuration
 
-### Change host
-
 ```js
 export default defineNuxtConfig({
   modules: [
     'nupolyon'
   ],
   nupolyon: {
+    // change host
     host: 'http://my-own-cdn.com/polyfill.min.js'
-  },
-})
-```
-
-### Selfhost mode
-
-Set host to `selfhost` to enable self-host mode
-
-```js
-export default defineNuxtConfig({
-  modules: [
-    'nupolyon'
-  ],
-  nupolyon: {
+    // or enable self-host mode
     host: 'selfhost'
+
+    // customize browserslist's target
+    target: 'defaults'
   },
 })
 ```
