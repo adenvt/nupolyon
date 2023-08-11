@@ -1,6 +1,10 @@
 {
   "name": "nupolyon",
   "version": "0.2.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adenvt/nupolyon.git"
+  },
   "packageManager": "yarn@3.6.1",
   "description": "Auto-Inject polyfill from polyfill.io",
   "license": "MIT",
