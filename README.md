@@ -24,6 +24,8 @@ Find and replace all on all files (CMD+SHIFT+F):
 - ✅ &nbsp;[Automatic detection][polyfillist] based on browserslist target
 - ✅ &nbsp;Using [polyfill.io](https://polyfill.io) CDN, Custom CDN, or Self-Host
 
+See the detailed feature explanation here: [#58 (comment)](https://github.com/adenvt/nupolyon/issues/58#issuecomment-1676713711)
+
 ## Quick Setup
 
 1. Add `nupolyon` dependency to your project
