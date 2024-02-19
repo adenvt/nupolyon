@@ -2005,11 +2005,11 @@ __metadata:
   linkType: hard
 
 "@types/polyfill-library@npm:^3.108.1":
-  version: 3.108.1
-  resolution: "@types/polyfill-library@npm:3.108.1"
+  version: 3.108.4
+  resolution: "@types/polyfill-library@npm:3.108.4"
   dependencies:
     "@types/node": "*"
-  checksum: b01729da629be5b0e7cb2b1e69c130948e59325a5d269f4a9fd6eba69bded114dd00550f0367bc66ef866467d7865eb26f29e54a7a1fe21045e21ce3f552aa05
+  checksum: 702b9f2956ea0e2680a9e78b8a3c201fd1ff0d4cced968aa964cd801e1ed5abee613dc93f07414f9232f3e8b6fad07d5bec73ad320ec68f36cbceeb0afc51728
   languageName: node
   linkType: hard
 
