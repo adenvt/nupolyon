@@ -31,14 +31,7 @@ See the detailed feature explanation here: [#58 (comment)](https://github.com/ad
 1. Add `nupolyon` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D nupolyon
-
-# Using yarn
-yarn add --dev nupolyon
-
-# Using npm
-npm install --save-dev nupolyon
+npx nuxi@latest module add nupolyon
 ```
 
 2. Add `nupolyon` to the `modules` section of `nuxt.config.ts`
