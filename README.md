@@ -18,6 +18,19 @@ Find and replace all on all files (CMD+SHIFT+F):
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
+## ⚠️ WARNING
+
+DON'T USE THIS MODULE, POLYFILL.IO HAS BEEN REPORTED INJECTING SOME MALICIOUS CODE.
+TEMPORARY WE MOVE THE URL TO CLOUDFLARE'S MIRROR.
+
+https://www.bleepingcomputer.com/news/security/polyfillio-javascript-supply-chain-attack-impacts-over-100k-sites/
+
+https://sansec.io/research/polyfill-supply-chain-attack
+
+https://www.theregister.com/2024/06/25/polyfillio_china_crisis/
+
+https://www.scmagazine.com/brief/over-100k-sites-hit-by-polyfill-io-supply-chain-attack
+
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
