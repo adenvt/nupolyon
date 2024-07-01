@@ -6,7 +6,7 @@
     "url": "git+https://github.com/adenvt/nupolyon.git"
   },
   "packageManager": "yarn@3.6.3",
-  "description": "Auto-Inject polyfill from polyfill.io",
+  "description": "Auto-Inject polyfill",
   "license": "MIT",
   "type": "module",
   "exports": {
