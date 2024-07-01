@@ -24,7 +24,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   // Default configuration options of the Nuxt module
   defaults: {
-    host: 'https://polyfill.io/v3/polyfill.min.js',
+    host: 'https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js',
   },
   async setup (options, nuxt) {
     const resolver = createResolver(import.meta.url)

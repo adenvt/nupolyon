@@ -4,7 +4,7 @@ Get your module up and running quickly.
 Find and replace all on all files (CMD+SHIFT+F):
 - Name: Nupolyon
 - Package name: nupolyon
-- Description: Auto-Inject polyfill from polyfill.io
+- Description: Auto-Inject polyfill from https://cdnjs.cloudflare.com/polyfill/
 -->
 
 # Nupolyon
@@ -13,7 +13,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 
-> Auto-Inject polyfill from polyfill.io
+> Auto-Inject polyfill from https://cdnjs.cloudflare.com/polyfill/
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
@@ -22,7 +22,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 <!-- Highlight some of the features your module provide here -->
 - ✅ &nbsp;[Automatic detection][polyfillist] based on browserslist target
-- ✅ &nbsp;Using [polyfill.io](https://polyfill.io) CDN, Custom CDN, or Self-Host
+- ✅ &nbsp;Using [cloudflare polyfill](https://cdnjs.cloudflare.com/polyfill/) CDN, Custom CDN, or Self-Host
 
 See the detailed feature explanation here: [#58 (comment)](https://github.com/adenvt/nupolyon/issues/58#issuecomment-1676713711)
 
