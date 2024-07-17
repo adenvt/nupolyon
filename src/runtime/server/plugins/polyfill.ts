@@ -1,8 +1,8 @@
+import type { NitroAppPlugin } from 'nitropack'
 import { joinURL, cleanDoubleSlashes } from 'ufo'
-import { defineNitroPlugin } from "#nitro";
 import { useRuntimeConfig } from "#imports";
 
-export default defineNitroPlugin((nitroApp) => {
+export default <NitroAppPlugin> function (nitroApp) {
   const config = useRuntimeConfig()
 
   const { src, isSelfHost } = config.public.nupolyon
@@ -18,4 +18,4 @@ export default defineNitroPlugin((nitroApp) => {
       html.head.unshift(preload, polyfill)  // insert at the beginning of the array
     })
   }
-})
+}
