@@ -1,4 +1,5 @@
 import { joinURL, cleanDoubleSlashes } from 'ufo'
+import { defineNitroPlugin } from "#nitro";
 import { useRuntimeConfig } from "#imports";
 
 export default defineNitroPlugin((nitroApp) => {
