@@ -46,7 +46,7 @@
     "@types/polyfill-library": "^3.108.1",
     "changelogen": "^0.5.4",
     "cheerio": "^1.0.0-rc.12",
-    "eslint": "^8.46.0",
+    "eslint": "^9.0.0",
     "nuxt": "^3.6.5",
     "vitest": "^0.34.1"
   }
