@@ -33,16 +33,16 @@ export interface ModuleOptions {
   selfhostPath?: string,
 }
 
-export interface ModulePrivateRuntimeConfig {
+export interface ModuleRuntimeConfig {
   nupolyon: {
     features: string[],
   },
 }
 
-export interface ModuleRuntimeConfig {
-  nuauth: {
+export interface ModulePublicRuntimeConfig {
+  nupolyon: {
     src: string,
-    isSelfHost: true,
+    isSelfHost: boolean,
   },
 }
 
@@ -83,7 +83,7 @@ export default defineNuxtModule<ModuleOptions>({
       addServerHandler({
         method : 'get',
         route  : options.selfhostPath,
-        handler: resolver.resolve('./runtime/route/selfhost'),
+        handler: resolver.resolve('./runtime/server/route/selfhost'),
       })
     }
 
