@@ -27,20 +27,32 @@ export interface ModuleOptions {
    */
   features?: string[] | ((features: string[]) => string[] | Promise<string[]>),
   /**
-   * Selfhost route path
-   * @default '/_nupolyon/polyfill'
+   * Selfhost configuration
    */
-  selfhostPath?: string,
+  selfhost?: {
+    /**
+     * Selfhost route path
+     * @default '/_nupolyon/polyfill'
+     */
+    path?: string,
+    /**
+     * Selfhost cache max-age
+     * @default 2592000 // 1 month
+     */
+    maxAge?: number,
+    /**
+     * Enable minify script
+     * @default true // on production only
+     */
+    minify?: boolean,
+  },
 }
 
 export interface ModuleRuntimeConfig {
   nupolyon: {
     features: string[],
-  },
-}
-
-export interface ModulePublicRuntimeConfig {
-  nupolyon: {
+    maxAge: number,
+    minify: boolean,
     src: string,
     isSelfHost: boolean,
   },
@@ -62,27 +74,36 @@ export default defineNuxtModule<ModuleOptions>({
     configKey: 'nupolyon',
   },
   defaults: {
-    host        : 'selfhost',
-    selfhostPath: '/_nupolyon/polyfill',
+    host    : 'selfhost',
+    selfhost: {
+      path  : '/_nupolyon/polyfill',
+      maxAge: 60 * 60 * 24 * 30,
+    },
   },
   async setup (options, nuxt) {
-    const resolver = createResolver(import.meta.url)
-
+    const resolver   = createResolver(import.meta.url)
     const features   = await resolveFeatures(options)
+    const maxAge     = options.selfhost?.maxAge as number
+    const minify     = options.selfhost?.minify ?? !nuxt.options.dev
     const isSelfHost = options.host === 'selfhost'
     const src        = options.host && !isSelfHost
       ? withQuery(options.host, { features: features.join(',') })
-      : options.selfhostPath as string
+      : options.selfhost?.path as string
 
-    nuxt.options.runtimeConfig.nupolyon        = { features }
-    nuxt.options.runtimeConfig.public.nupolyon = { src, isSelfHost }
+    nuxt.options.runtimeConfig.nupolyon = {
+      features,
+      maxAge,
+      minify,
+      src,
+      isSelfHost,
+    }
 
     addServerPlugin(resolver.resolve('./runtime/server/plugins/polyfill'))
 
     if (isSelfHost) {
       addServerHandler({
         method : 'get',
-        route  : options.selfhostPath,
+        route  : options.selfhost?.path,
         handler: resolver.resolve('./runtime/server/route/selfhost'),
       })
     }

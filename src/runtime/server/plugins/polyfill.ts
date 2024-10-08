@@ -9,7 +9,7 @@ export default <NitroAppPlugin> function (nitroApp) {
   const {
     src,
     isSelfHost,
-  } = config.public.nupolyon
+  } = config.nupolyon
 
   const host = isSelfHost
     ? cleanDoubleSlashes(joinURL(config.app.baseURL, src))
@@ -20,7 +20,15 @@ export default <NitroAppPlugin> function (nitroApp) {
     const polyfill = `<script src="${host}" crossorigin="anonymous" data-testid="nupolyon-script"></script>`
 
     nitroApp.hooks.hook('render:html', (html) => {
-      html.head.unshift(preload, polyfill) // insert at the beginning of the array
+      // Inject after meta header and before others script
+      const i = html.head.findIndex((i) => i.includes('<link rel="modulepreload" as="script"'))
+
+      if (i !== -1) {
+        const head = html.head[i]
+        const j    = head.indexOf('<link rel="modulepreload" as="script"')
+
+        html.head[i] = `${head.slice(0, j)}\n${preload}\n${polyfill}\n${head.slice(j)}`
+      }
     })
   }
 }
