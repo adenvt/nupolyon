@@ -41,20 +41,8 @@ See the detailed feature explanation here: [#58 (comment)](https://github.com/ad
 
 ## Quick Setup
 
-1. Add `nupolyon` dependency to your project
-
 ```bash
 npx nuxi@latest module add nupolyon
-```
-
-2. Add `nupolyon` to the `modules` section of `nuxt.config.ts`
-
-```js
-export default defineNuxtConfig({
-  modules: [
-    'nupolyon'
-  ]
-})
 ```
 
 That's it! You can now use Nupolyon in your Nuxt app ✨
@@ -68,12 +56,12 @@ export default defineNuxtConfig({
   ],
   nupolyon: {
     // change host
-    host: 'http://my-own-cdn.com/polyfill.min.js'
+    host: 'http://my-own-cdn.com/polyfill.min.js',
     // or enable self-host mode
-    host: 'selfhost'
+    host: 'selfhost',
 
     // customize browserslist's target
-    target: 'defaults'
+    target: 'defaults',
   },
 })
 ```
