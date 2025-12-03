@@ -4581,7 +4581,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.46.0":
+"eslint@npm:8.46.0":
   version: 8.46.0
   resolution: "eslint@npm:8.46.0"
   dependencies:
@@ -7066,7 +7066,7 @@ __metadata:
     browserslist-to-esbuild: ^1.2.0
     changelogen: ^0.5.4
     cheerio: ^1.0.0-rc.12
-    eslint: ^8.46.0
+    eslint: 8.46.0
     nuxt: ^3.6.5
     polyfill-library: ^4.8.0
     polyfillist: ^0.1.1
