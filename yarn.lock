@@ -1385,7 +1385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/eslint-config@npm:^0.1.1":
+"@nuxt/eslint-config@npm:0.1.1":
   version: 0.1.1
   resolution: "@nuxt/eslint-config@npm:0.1.1"
   dependencies:
@@ -1426,7 +1426,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/module-builder@npm:^0.8.3":
+"@nuxt/module-builder@npm:0.8.3":
   version: 0.8.3
   resolution: "@nuxt/module-builder@npm:0.8.3"
   dependencies:
@@ -1985,7 +1985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/polyfill-library@npm:^3.108.1":
+"@types/polyfill-library@npm:3.108.1":
   version: 3.108.1
   resolution: "@types/polyfill-library@npm:3.108.1"
   dependencies:
@@ -3198,7 +3198,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"changelogen@npm:^0.5.4":
+"changelogen@npm:0.5.4":
   version: 0.5.4
   resolution: "changelogen@npm:0.5.4"
   dependencies:
@@ -3244,7 +3244,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cheerio@npm:^1.0.0-rc.12":
+"cheerio@npm:1.0.0-rc.12":
   version: 1.0.0-rc.12
   resolution: "cheerio@npm:1.0.0-rc.12"
   dependencies:
@@ -7057,21 +7057,21 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nupolyon@workspace:."
   dependencies:
-    "@nuxt/eslint-config": ^0.1.1
+    "@nuxt/eslint-config": 0.1.1
     "@nuxt/kit": ^3.6.5
-    "@nuxt/module-builder": ^0.8.3
+    "@nuxt/module-builder": 0.8.3
     "@nuxt/schema": ^3.6.5
     "@nuxt/test-utils": ^3.6.5
-    "@types/polyfill-library": ^3.108.1
+    "@types/polyfill-library": 3.108.1
     browserslist-to-esbuild: ^1.2.0
-    changelogen: ^0.5.4
-    cheerio: ^1.0.0-rc.12
+    changelogen: 0.5.4
+    cheerio: 1.0.0-rc.12
     eslint: ^8.46.0
     nuxt: ^3.6.5
     polyfill-library: ^4.8.0
     polyfillist: ^0.1.1
     ufo: ^1.2.0
-    vitest: ^0.34.1
+    vitest: 0.34.1
   languageName: unknown
   linkType: soft
 
@@ -10137,7 +10137,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:^0.34.1":
+"vitest@npm:0.34.1":
   version: 0.34.1
   resolution: "vitest@npm:0.34.1"
   dependencies:
